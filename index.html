@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>License</title>
+		<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+		<script>
+			$(document).ready(function(){
+
+				$.get(location.hash.replace("#","./"),{},
+				function(data){
+					$("body").html(marked(data));
+					document.title = $("h1")[0].innerText;
+				});
+			});
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
