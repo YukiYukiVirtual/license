@@ -7,8 +7,7 @@
 		<script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 		<script>
 			$(document).ready(function(){
-
-				$.get(location.hash.replace("#","./"),{},
+				$.get(location.hash.replace("#","./")+"?"+Math.random(),{},
 				function(data){
 					$("body").html(marked(data));
 					document.title = $("h1")[0].innerText;
